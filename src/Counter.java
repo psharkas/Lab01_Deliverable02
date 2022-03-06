@@ -10,11 +10,9 @@ public class Counter {
 		String headsOrTailsGuess​ = scnr.nextLine();
 		System.out.println("How many times shall we flip a coin?");
 		int numberOfFlips​ = scnr.nextInt();
-//		System.out.println("You want " + headsOrTailsGuess​ + " and " + numberOfFlips​ + " amount of flips!");
+		System.out.println("You want " + headsOrTailsGuess​ + " and " + numberOfFlips​ + " amount of flips!");
 		
 		int upperBound = 2;
-//		int headsCounter = 0;
-//		int tailsCounter = 0;
 		int correctCount = 0;
 		
 		
