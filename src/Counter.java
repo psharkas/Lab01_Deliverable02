@@ -1,9 +1,42 @@
+import java.util.Scanner;
+import java.util.Random;
 
 public class Counter {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		Scanner scnr = new Scanner(System.in);
+		System.out.println("Guess which will have more: heads or tails? ");
+		String headsOrTailsGuess​ = scnr.nextLine();
+		System.out.println("How many times shall we flip a coin?");
+		int numberOfFlips​ = scnr.nextInt();
+//		System.out.println("You want " + headsOrTailsGuess​ + " and " + numberOfFlips​ + " amount of flips!");
+		
+		int upperBound = 2;
+//		int headsCounter = 0;
+//		int tailsCounter = 0;
+		int correctCount = 0;
+		
+		
+		for (int i = 0; i < numberOfFlips​; i++) {
+			Random rand = new Random();
+			int randomNum = rand.nextInt(upperBound);
+			
+			if (randomNum == 0) {
+				if (headsOrTailsGuess​.equals("heads")) {
+					correctCount += 1;
+				}
+				System.out.println("heads");
+			}
+		
+			else if (randomNum == 1){
+				if (headsOrTailsGuess​.equals("tails")) {
+					correctCount += 1;
+				}
+				System.out.println("tails");
+			}
+		}
+		
+		System.out.println(correctCount);
 	}
-
 }
