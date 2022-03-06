@@ -15,7 +15,6 @@ public class Counter {
 		int upperBound = 2;
 		int correctCount = 0;
 		
-		
 		for (int i = 0; i < numberOfFlips​; i++) {
 			Random rand = new Random();
 			int randomNum = rand.nextInt(upperBound);
@@ -35,6 +34,21 @@ public class Counter {
 			}
 		}
 		
-		System.out.println(correctCount);
+		float count = correctCount;
+		float percentage = (count/numberOfFlips​)*100;
+		System.out.println("Your guess, " + headsOrTailsGuess​ + ", came up " + correctCount + " time(s).");
+		System.out.println("That's " + percentage + "%!");
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
