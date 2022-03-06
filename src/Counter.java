@@ -8,15 +8,17 @@ public class Counter {
 		Scanner scnr = new Scanner(System.in);
 		System.out.println("Guess which will have more: heads or tails? ");
 		String headsOrTailsGuess​ = scnr.nextLine();
+		
 		System.out.println("How many times shall we flip a coin?");
 		int numberOfFlips​ = scnr.nextInt();
+		
 		System.out.println("You want " + headsOrTailsGuess​ + " and " + numberOfFlips​ + " amount of flips!");
+		Random rand = new Random();
 		
 		int upperBound = 2;
 		int correctCount = 0;
-		
+
 		for (int i = 0; i < numberOfFlips​; i++) {
-			Random rand = new Random();
 			int randomNum = rand.nextInt(upperBound);
 			
 			if (randomNum == 0) {
@@ -40,15 +42,3 @@ public class Counter {
 		System.out.println("That's " + percentage + "%!");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
